@@ -1,0 +1,56 @@
+.site-container {
+    padding: 0;
+}
+
+.project-grid {
+    display: flex;
+    flex-wrap: wrap;
+    margin: var(--navbar-height) 15%;
+    width: 100%;
+    height: calc(100% - var(--navbar-height) * 2);
+}
+
+.project-item {
+    color: var(--secondary-font-color);
+    margin: 1%;
+    padding: 3rem;
+    background-color: var(--primary-color-faded);
+    box-shadow: var(--pop-out-shadow);
+}
+
+.full-size {
+    width: auto;
+}
+
+.project-item p {
+    font-size: 2rem;
+}
+
+.category-title {
+    font-size: 4rem;
+}
+
+.description-and-image-container {
+    display: flex;
+}
+
+.description-shared_with_image {
+    width: 50%;
+    padding-right: 5rem;
+    margin: auto;
+}
+
+.image-shared-with-description {
+    width: 50%;
+    object-fit: contain;
+}
+
+.big-image {
+    padding: 0;
+    width: 100%;
+}
+
+#entropy-settings {
+    background-size: contain;
+    background-image: url("entropy_media/settings.webp");
+}

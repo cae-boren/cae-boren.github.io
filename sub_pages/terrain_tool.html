@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="project.css">
+    <link rel="stylesheet" href="normalize.css">
+    <script src="https://kit.fontawesome.com/135d8e4e14.js" crossorigin="anonymous"></script>
+    <script src="../script.js" defer></script>
+</head>
+
+<body id="body">
+    <header id="header">
+        <h2 class="navbar-name nav-text">
+            <a href="../index.html">cae borén</a>
+        </h2>
+         <ul class="navbar">
+            <li><a href="../index.html" class="nav-text">home</a></li>
+            <li><a href="../sub_pages/terrain_tool.html" class="nav-text">specialization</a></li>
+            <li><a href="../sub_pages/about_me.html" class="nav-text">about me</a></li>
+            <li><a href="https://drive.google.com/file/d/1SPBEyL-BZl--hR5sqh_jJxtmnIqSNqtr/view?usp=sharing" target="_blank" class="nav-text">cv</a></li>
+        </ul>
+        <ul class="contact-links">
+            <li>
+                <a href="https://www.linkedin.com/in/cae-bor%C3%A9n-093909340/" target="_blank">
+                    <i class="fa-brands fa-linkedin-in nav-text contact"></i>
+                </a>
+            </li>
+            <li>
+                <a href="mailto:cae.enby@gmail.com">
+                    <i class="fa-solid fa-envelope nav-text contact"></i>
+                </a>
+            </li>
+        </ul>
+    </header>
+    <main>
+        <div class="site-welcome">
+            <div class="welcome-text-container" id="welcome-text">
+                <h1 class="secondary-font-color">
+                    Terrain Tool
+                </h1>
+                <h2 class="secondary-font-color">
+                    Marching Cubes in-editor Tool for Game Terrain<br>
+                    Developed in 4 weeks
+                </h2>
+            </div>
+        </div>
+                <div class="site-container">
+            <div class="project-grid">
+                <div class="project-item full-size">
+                    <div class="category-title">Marching Cubes</div>
+                    <div class="description-and-image-container">
+                        <p>
+                            <br>The terrain tool uses <b>marching cubes</b> to convert a 3D grid of numerical values 
+                            (iso values) into a mesh.<br><br>
+                            
+                            Marching cubes work by iterating each voxel in the desired area and by encoding the 
+                            iso value of each corner as a bit in an 8-bit integer, a <i>cube configuration index</i>. 
+                            It is used to look up <i>edge indices</i> in a <i>triangulation table</i>.
+                            The result from the look up can look like this:<br>
+                            [0, 11, 2, 8, 11, 0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1]<br>
+                            where each triangle has 3 indices which means that we can create a for-loop with a step 
+                            size of 3 to iterate over the edge indices in order to create triangles. In a blocky 
+                            fashion, the center point between <i>edge index a</i> and <i>edge index b</i> can be 
+                            used to generate vertex positions but in order to smoothen the mesh, the vertex position 
+                            can be interpolated between the two edge indices based on the iso values they correspond 
+                            to. This will cause the surface of the generated mesh to be positioned exactly where the 
+                            iso grid transitions from above the <i>surface value</i> to below the <i>surface value</i>, 
+                            <b>resulting in smoother terrain</b>.<br><br>
+
+                            When generating blocky terrain, vertices are duplicated for each face in order to allow 
+                            for flat-shaded terrain. For the smooth terrain, I am generating indices which allows 
+                            the terrain to easily share normals as well as to <b>reduce the vertex count</b>. The 
+                            normals are calculated by taking all of the connected faces' normals and averaging 
+                            them together.
+                        </p>
+                    </div>
+                </div>
+                <div class="project-item full-size">
+                    <div class="description-and-image-container">
+                        <img src="terrain_tool_media/blocky_terrain.webp" style="width: 50%;">
+                        <img src="terrain_tool_media/smooth_terrain.webp" style="width: 50%;">
+                    </div>
+                    <p>Showing difference between center of edge interpolation and iso value interpolation for vertices.</p>
+                </div>
+                <div class="project-item full-size">
+                    <div class="category-title">Plugin Development</div>
+                    <div class="description-and-image-container">
+                        <p>
+                            <br>To allow for creating terrain in the Godot editor, a plugin had to be created. 
+                            Plugins are loaded on startup and scripts marked as tools are able to run inside of 
+                            the editor.<br><br>
+                            
+                            <i>_forward_3d_gui_input()</i> is a function which can be overridden to provide an input 
+                            event for anything happening inside of the 3D viewport. This is used to handle button 
+                            presses in order to create chunks of terrain. To do this, a plane is created at the world 
+                            origin at height 0 which a ray in intersected with to figure out where to place the chunk. 
+                            To prevent chunk placement every time one would click in the viewport, this code only 
+                            runs when the custom <i>Terrain</i> node is selected inside of the hierarchy, allowing 
+                            easy control of terrain management without interfering with normal editor usage.<br><br>
+
+                            Similar work went into painting the mesh, which meant altering the iso grid values to 
+                            cause the terrain to generate differently. Instead of intersecting a ray against a plane, 
+                            an intersection test against the terrain mesh itself had to take place. Luckily, Godot 
+                            makes it really easy to generate a trimesh collider for objects (only one line of code!) 
+                            so that was no issue. The hard part was implementing the changes to the iso grid as well 
+                            as regenerating chunks properly. For this, two different kinds of brushes were created, 
+                            one for painting square shapes and one for spherical shapes. The iso grid values around 
+                            the intersection point are altered gradually to be under what is considered the surface 
+                            threshold. A problem was encountered as painting along the edges of a chunk would cause 
+                            a harsh cutoff; the neighboring chunks weren't being regenerated. To solve this, when an 
+                            iso value passes from under the surface threshold to above, or the opposite, the 
+                            local X and Z coordinates within the chunks are sampled to detect if the iso value 
+                            is on a border. If it is, the chunk located in the borders direction is added to a list 
+                            of affected chunks. If two chunks gets added to the list, for both the X and Z axes- a 
+                            chunk would also have to be regenerated on the diagonals. So this is naturally handled 
+                            as well.<br><br>
+
+                            To make usage of the tool easy, work went into making a <b>custom dock</b> for the editor. 
+                            Godot has excellent support for creating your own custom UI that can be integrated with 
+                            the engine and made to work just like their own UI. I decided to create a custom dock 
+                            designed to be positioned next to the Inspector. Then, functionality was added to to it 
+                            by creating buttons that would allow the user to select the chunk management tool or the 
+                            paint tool. Both of these would have their own set of buttons and inputs to control the 
+                            type of terrain created, chunk size or brush type, brush strength, height, width, radius 
+                            and so on. 
+                        </p>
+                    </div>
+                </div>
+                <div class="project-item" style="width: 100%;">
+                    <div class="description-and-image-container" style="width: 100%;">
+                        <img src="terrain_tool_media/paint_mesh.webp" style="width: 50%; margin: 0 15rem">
+                        <img src="terrain_tool_media/manage_chunks.webp" style="width: 50%; margin: 0 15rem">
+                    </div>
+                </div>
+                <div class="project-item full-size">
+                    <div class="category-title">Procedural Terrain Demo</div>
+                    <div class="description-and-image-container">
+                        <p>
+                            <br>When working on this project, something that was always in the back of my mind was 
+                            how cool it'd be to utilize this fancy meshing algorithm with procedural generation; as 
+                            it is something I find quite fascinating! This part of the project became a small bonus 
+                            feature as I did not expect to finish the marching cube algorithm as well as the mesh 
+                            painting as fast as I did.<br>
+                            <b>See this as a demo of what the tool/algorithm could be used for, more so than an 
+                            actual finished thing</b>.<br><br>
+
+                            To make procedural terrain that was easily usable while still keeping to the in-engine 
+                            workflow, I decided to add on to the chunk management part of the tool. I added a couple 
+                            buttons that would show up in the dock that allows for creating of terrain which adheres 
+                            to pre-determined generation rules. So depending on which terrain option that is 
+                            selected, a noise algorithm generates an iso value which is then be processed in 
+                            certain ways, such as fading out the terrain towards the top of the chunk. To get 
+                            procedurally generated terrain for this tool I simply used a mix of <b>2D and 3D perlin 
+                            noise</b>, depending on the terrain type. More effort went into <b>blending chunks</b> 
+                            into each other properly- which first was an issue because the mesh fadeout I implemented 
+                            towards the edges of the chunks used a linear fadeout across the entire chunk. This meant 
+                            that the edge at the opposite side of the chunk from which it fades from would be altered, 
+                            something which wouldn't be applied to the neighboring chunks and therefore cause a 
+                            desync in the processed noise values at the borders. I fixed this by implementing a 
+                            smoothstep that is more aggressive towards the start of the border and completely 
+                            moot at the end of the border.<br><br>
+
+                            The results of This kind of terrain can be seen below.
+                        </p>
+                    </div>
+                </div>
+                <div class="project-item">
+                    <div class="description-and-image-container">
+                        <img src="terrain_tool_media/procedural_terrain.webp" style="width: 100%;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        Hi! It looks like you've reached the end of this page. If you're interested in what I do, feel free to send me a DM on LinkedIn!
+    </footer>
+</body>
+</html>

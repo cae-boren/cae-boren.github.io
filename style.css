@@ -1,0 +1,360 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+:root {
+    --primary-font-color: whitesmoke;
+    --secondary-font-color: #1b1b1b;
+    --background-color: #202020;
+    --primary-color: #d394ff;
+    --primary-color-faded: #d294ff49;
+    --secondary-color: #4b3656;
+    --secondary-color-faded: #4b365648;
+    --accent-color: #ff84bb;
+
+    --navbar-hover-text-shadow: 1px 1px 5px var(--primary-color);
+    --navbar-height: 11rem;
+    --navbar-side-offset: 5rem;
+    --navbar-transition-duration: 0.3s;
+
+    --welcome-height: 50rem;
+
+    --pop-out-shadow: -2px 2px 5px var(--secondary-color-faded);
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+
+    text-decoration: none;
+}
+
+html {
+    color: var(--primary-font-color);
+    font-size: 62.5%;
+    font-family: "Source Code Pro", monospace;
+}
+
+header {
+    display: flex;
+    justify-content: right;
+    position: sticky;
+    top: 0;
+    background-color: var(--background-color);
+    width: 100%;
+    height: var(--navbar-height);
+
+    z-index: 10;
+    transition: background-color var(--navbar-transition-duration) ease;
+}
+
+.navbar-name {
+    position: absolute;
+    left: var(--navbar-side-offset);
+    font-size: 3.5rem;
+    line-height: var(--navbar-height);
+    text-align: center;
+    margin: 0px !important;
+}
+
+.navbar-name a {
+    color: var(--primary-font-color);
+
+    transition: color var(--navbar-transition-duration) ease;
+}
+
+.navbar-name a:hover {
+    color: var(--primary-color);
+}
+
+
+.navbar {
+    position: relative;
+    right: var(--navbar-side-offset);
+    font-size: 2.2rem;
+    font-weight: 400;
+    line-height: calc(var(--navbar-height) - 2rem);
+}
+
+.nav-text {
+    color: var(--primary-font-color);
+    margin: 1rem 1.5rem 0 1.5rem;
+
+    transition: color var(--navbar-transition-duration) ease;
+}
+
+ul {
+    list-style-type: none;
+    overflow: hidden;
+}
+
+ul li {
+    float: left;
+}
+
+ul li a {
+    display: inline-block;
+    color: var(--primary-font-color);
+    text-align: center;
+    text-decoration: none;
+    padding: 0 1rem;
+}
+
+.navbar li a:hover {
+    color: var(--primary-color);
+}
+
+.contact-links li a i:hover {
+    color: var(--primary-color);
+}
+
+.contact-links {
+    position: relative;
+    top: 1rem;
+    right: var(--navbar-side-offset);
+    line-height: var(--navbar-height);
+}
+
+.contact-links li a {
+    padding: 0;
+}
+
+.contact-links li a i {
+    font-size: 4rem;
+}
+
+.contact-links li a i:hover {
+    background-color: transparent;
+}
+
+body {
+    background-color: var(--background-color);
+    box-sizing: border-box;
+    font-size: 1.6rem;
+    background-image: url("background_images/blurry_gradient.svg");
+    background-size: cover;
+}
+
+.site-welcome {
+    width: 100%;
+    height: var(--welcome-height);
+    display: flex;
+    flex-direction: column;
+}
+
+.welcome-gif {
+    position: absolute;
+    top: var(--navbar-height);
+    width: 100%;
+    height: var(--welcome-height);
+    z-index: -1;
+
+    filter: brightness(30%);
+}
+
+.welcome-text-container {
+    color: var(--background-color);
+    text-align: center;
+    position: relative;
+    top: 30%;
+
+    transition: opacity 0.5s ease-out;
+}
+
+.welcome-text-container h1 {
+    font-size: 6rem;
+    margin: 0;
+}
+
+.welcome-text-container h2 {
+    font-size: 3rem;
+}
+
+.site-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    background-size: cover;
+}
+
+.project-container {
+    position: relative;
+    width: 40%;
+    height: 30%;
+    border-radius: 0.5rem;
+    background-color: var(--background-color);
+    box-shadow: var(--pop-out-shadow);
+}
+
+.project-frame {
+    z-index: 1;
+    pointer-events: none;
+    position: absolute;
+    top: 2.5%;
+    left: 2.5%;
+    width: 95%;
+    height: 95%;
+    background-position: 50% 69%;
+}
+
+.project-image {
+    z-index: 0;
+    position: absolute;
+    top: 21%;
+    left: 5.4%;
+    width: 89.1%;
+    height: 70%;
+    filter: brightness(100%);
+
+    transition: filter 0.3s ease;
+}
+
+.project-image:hover {
+    cursor: pointer;
+
+    filter: brightness(30%);
+}
+
+.project-info {
+    opacity: 0.0;
+
+    transition: opacity 0.3s ease;
+}
+
+.project-info-text-container {
+    top: 12rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.project-info-text-container * {
+    width: 80%;
+    margin: auto;
+    text-wrap-mode: wrap;
+    text-shadow: 1px 1px 1px #000000;
+}
+
+.project-info * {
+    pointer-events: none;
+    position: relative;
+    z-index: 1;
+}
+
+.project-icon {
+    position: absolute;
+    right: 5rem;
+    bottom: 4.5rem;
+    height: 6rem;
+    font-size: 6rem;
+}
+
+.fa-linux {
+    color : white;
+    left: 19rem;
+}
+
+.fa-apple {
+    color : white;
+    left: 26rem;
+}
+
+.fa-windows {
+    color: #396FD4;
+    left: 5rem;
+}
+
+.fa-android {
+    color: #a4c639;
+    left: 12rem;
+}
+
+.android-solo {
+    left: 5rem;
+}
+
+.ps5 {
+    filter: invert();
+    left: 12rem;
+}
+
+.ue {
+    filter: invert();
+}
+
+.tengine {
+    scale: 150%;
+    right: 8rem;
+}
+
+#selfie-container {
+    height: 100%;
+}
+
+#selfie {
+    width: auto;
+    height: 75%;
+    margin: 12.5rem 0 12.5rem 0;
+    padding: 5rem;
+    background-color: var(--primary-color-faded);
+    box-shadow: var(--pop-out-shadow);
+}
+
+#about-me-text-container {
+    margin: auto 0 auto 0;
+    flex-direction: column;
+    width: 40%;
+    font-size: x-large;
+    color: var(--secondary-font-color);
+    padding: 5rem;
+    background-color: var(--primary-color-faded);
+    box-shadow: var(--pop-out-shadow);
+    text-align: center;
+}
+
+.secondary-font-color {
+    color: var(--secondary-font-color);
+}
+
+.primary-font-color {
+    color: var(--primary-font-color);
+}
+
+.accent-color {
+    color: var(--accent-color);
+    text-shadow: none;
+}
+
+#climbing-container {
+    width: 100%;
+    height: auto;
+}
+
+#climbing {
+    width: 80%;
+    height: 80%;
+    margin-left: 10%;
+    height: calc((100vh - var(--navbar-height)) - 5rem);
+    padding: 5rem;
+    box-shadow: var(--pop-out-shadow);
+}
+
+#stars {
+    position: absolute;
+    top: var(--navbar-height);
+    right: 5rem;
+    user-select: none;
+    font-size: x-small;
+    z-index: -1;
+}
+
+footer {
+    height: var(--navbar-height);
+    background-color: var(--background-color);
+    text-align: center;
+    text-wrap: wrap;
+    padding-top: 3rem;
+}
