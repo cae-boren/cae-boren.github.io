@@ -12,9 +12,10 @@
 
 .project-item {
     color: var(--secondary-font-color);
+    line-height: 3rem;
     margin: 1%;
     padding: 3rem;
-    background-color: var(--primary-color-faded);
+    background-color: var(--project-background-color);
     box-shadow: var(--pop-out-shadow);
 }
 
