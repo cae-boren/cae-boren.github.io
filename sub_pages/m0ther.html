@@ -66,7 +66,7 @@
                     <div class="category-title">Blood System</div>
                     <div class="description-and-image-container">
                         <p>
-                            <br>I designed and implemented a <b>blood system</b>. It features a <b>custom particle 
+                            <br>I designed and implemented a blood system. It features a <b>custom particle 
                             system</b> in order to get collision results for the particles, something which is 
                             otherwise not possible in Godot.<br><br>
 
@@ -75,14 +75,14 @@
                             position of the hit. Getting the UV position is required to mask pixels around the 
                             hit UV position which causes the shader I made to render the blood texture.<br><br>
 
-                            An important feature for us on the team was to have persistent blood in the 
+                            An important feature for us on the team was to have <b>persistent blood</b> in the 
                             level, which would cause more and more blood to show for each retry. Because of 
                             engine limitations it wasn't possible to find each mesh after reloading the level, 
                             as all IDs would be re-generated. To circumvent this issue I simply store all the 
                             successful raycasts in a dictionary and re-raycast them when pressing retry. This 
                             causes the game to freeze as hundreds of raycasts are done on retry in some cases.
                             My solution was to start a thread per mesh which allowed the operations to be 
-                            massively parallelized which hugely sped up the loading times. This, paired with a
+                            massively <b>parallelized</b> which hugely sped up the loading times. This, paired with a
                             loading screen made the issue disappear.
                         </p>
                     </div>
@@ -124,7 +124,7 @@
                             non-destructive workflows. The editor runs directly inside the game and integrates 
                             custom gizmos, snapping logic, undoable commands, multi-selecting and object duplication. 
                             Alongside the level editor I had to build a system for saving levels locally. It also 
-                            exports previews of the levels, which was displayed in the level-selection screen.<br>
+                            exports previews of the levels, which was displayed in the level-selection screen.
                             The most difficult part to implement was a system to undo/redo any changes made 
                             within the level editor. It uses two separate command stacks keeping track of undo and 
                             redo histories. Commands are stored as dictionaries containing the command type, 
