@@ -106,13 +106,13 @@
                             glow in the dark meant that we could keep our environment dark and use emissive 
                             materials on the insects to help the player orient themselves.<br><br>
 
-                            Because we wanted them to interact with the light orbs the player would shoot, I 
-                            originally designed the system using Blueprints but quickly switched to using Niagara- 
+                            Because we wanted the insects to interact with the light orbs the player would shoot, I 
+                            originally designed the system using Blueprints because of the ease of implementation with other code variables, but quickly switched to using Niagara- 
                             Unreal Engine's particle system. This was because it would be highly inefficient to 
-                            update potentially tens of thousands of insects on the CPU. The insects use <b>signed 
+                            update potentially tens of thousands of insects on the CPU. <br>The insects use <b>signed 
                             distance fields</b> to traverse on meshes in the world and walk around pretty mindlessly 
-                            using various forces. Implementing interactivity with code was a daunting task that 
-                            actually proved to be quite easy using Blueprints. I also struggled a bit with creating 
+                            using various forces. Implementing interactivity with variables in the game was a daunting task that 
+                            actually proved to be quite easy since Blueprints have the functionality to directly interact with Niagara. I also struggled a bit with creating 
                             custom <b>scratch modules</b> that allowed me to significantly simplify the particle update 
                             state by hiding complicated code beneath easily understandable function names. With all 
                             of this I managed to make the insects flee from the player and the impact of the light 

@@ -107,7 +107,7 @@
                             cause the terrain to generate differently. Instead of intersecting a ray against a plane, 
                             an intersection test against the terrain mesh itself had to take place. Luckily, Godot 
                             makes it really easy to generate a trimesh collider for objects (only one line of code!) 
-                            so that was no issue. The hard part was implementing the changes to the iso grid as well 
+                            so that was no issue. <br>The hard part was implementing the changes to the iso grid as well 
                             as regenerating chunks properly. For this, two different kinds of brushes were created, 
                             one for painting square shapes and one for spherical shapes. The iso grid values around 
                             the intersection point are altered gradually to be under what is considered the surface 
@@ -154,7 +154,7 @@
                             buttons that would show up in the dock that allows for creating of terrain which adheres 
                             to pre-determined generation rules. So depending on which terrain option that is 
                             selected, a noise algorithm generates an iso value which is then be processed in 
-                            certain ways, such as fading out the terrain towards the top of the chunk. To get 
+                            certain ways, such as fading out the terrain towards the top of the chunk. <br>To get 
                             procedurally generated terrain for this tool I simply used a mix of <b>2D and 3D perlin 
                             noise</b>, depending on the terrain type. More effort went into <b>blending chunks</b> 
                             into each other properly- which first was an issue because the mesh fadeout I implemented 
