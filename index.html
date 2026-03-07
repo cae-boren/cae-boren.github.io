@@ -7,49 +7,160 @@
     <title>Portfolio</title>
 
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="normalize.css">
     <script src="https://kit.fontawesome.com/135d8e4e14.js" crossorigin="anonymous" defer></script>
     <script src="script.js" defer></script>
+    
+    <link rel="preload" href="projects.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="projects.css"></noscript>
 </head>
-
-<body id="body">
-    <header id="header">
-        <h2 class="navbar-name nav-text">
-            <a href="index.html">cae borén</a>
-        </h2>
-         <ul class="navbar">
-            <li><a href="sub_pages/terrain_tool.html" class="nav-text">specialization</a></li>
-            <li><a href="sub_pages/about_me.html" class="nav-text">about me</a></li>
-            <li><a href="https://drive.google.com/file/d/1SPBEyL-BZl--hR5sqh_jJxtmnIqSNqtr/view?usp=sharing" class="nav-text" target="_blank">cv</a></li>
-        </ul>
-        <ul class="contact-links">
-            <li>
-                <a href="https://www.linkedin.com/in/cae-bor%C3%A9n-093909340/" target="_blank">
-                    <i class="fa-brands fa-linkedin-in nav-text contact"></i>
-                </a>
-            </li>
-            <li>
-                <a href="mailto:cae.boren@gmail.com">
-                    <i class="fa-solid fa-envelope nav-text contact"></i>
-                </a>
-            </li>
-        </ul>
+<body>
+    <header>
+        <p id="name-button" class="highlight-on-hover">CAE BORÉN</p>
+        <nav>
+            <a class="highlight-on-hover" data-target="game-projects">GAME PROJECTS</a>
+            <span class="header-divider">|</span>
+            <a class="highlight-on-hover" data-target="personal-projects">PERSONAL PROJECTS</a>
+            <span class="header-divider">|</span>
+            <a class="highlight-on-hover" data-target="about-me">ABOUT ME</a>
+            <span class="header-divider">|</span>
+            <a class="highlight-on-hover" href="https://drive.google.com/file/d/1SPBEyL-BZl--hR5sqh_jJxtmnIqSNqtr/view" target="_blank">CV</a>
+            <span class="header-divider">|</span>
+            <a class="highlight-on-hover" href="https://www.linkedin.com/in/cae-borén-093909340" target="_blank">LINKEDIN</a>
+            <span class="header-divider">|</span>
+            <a class="highlight-on-hover" href="mailto:cae.boren@gmail.com" target="_blank">EMAIL</a>
+        </nav>
     </header>
     <main>
-        <div class="site-welcome">
-            <div class="welcome-text-container" id="welcome-text">
-                <h1>
-                    Cae Borén
-                </h1>
-                <h2>
-                    Game Programmer
-                </h2>
+        <div id="background-fluff-container">
+            <p id="side-stars">
+                ⢘⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
+                ⢈⠂⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
+                ⢸⠀⠀⠀⣼⡀⠀⢀⠖⠉⠀⠉⠓⡄⠀⠀<br>
+                ⣸⠀⠀⠀⣿⡇⡰⠁⠀⠀⠀⠀⠀⢹⠀⠀<br>
+                ⣻⠈⠉⠉⡏⡏⠏⠁⠀⠀⠀⠀⠀⡋⠀⠀<br>
+                ⡇⠀⠀⠀⣿⠀⠀⠀⠀⠀⠀⠀⡼⠁⠀⠀<br>
+                ⡇⠀⠀⠀⠀⠀⠀⡀⠀⠀⠀⢰⡥⠋⢙⡆<br>
+                ⡇⢠⠉⠙⢢⠀⢀⡇⠀⠀⢠⡏⠀⠠⠎⠀<br>
+                ⡇⠘⠦⠠⠎⠀⠠⡇⠀⢠⡏⠀⠀⠀⠀⠀<br>
+                ⡇⠀⠀⠀⠀⠀⢸⣇⠀⠁⠀⠀⠀⠀⠀⠀<br>
+                ⡇⠀⠀⠀⠀⣠⠏⠈⣆⠀⠀⠀⠀⠀⠀⠀<br>
+                ⡇⠐⠒⠚⠯⡁⠀⠀⠀⣉⠽⠟⠒⠉⠁⠀<br>
+                ⡇⠀⠀⠀⠀⡈⣦⢠⠞⠁⠀⠀⠀⠀⠀⠀<br>
+                ⣷⠀⡀⠀⢠⡇⠸⡇⠀⠀⠀⠀⠀⠀⠀⠀<br>
+                ⡟⢸⠀⠀⣾⠃⢰⡇⠀⠀⠀⣀⠀⠀⠀⠀<br>
+                ⣿⠘⠤⢴⠃⠀⢸⠁⠀⠀⠸⣌⡿⠀⠀⠀<br>
+                ⡇⠀⠀⡜⠀⠀⠘⠀⠀⠀⡀⠀⠀⠀⠀⠀<br>
+                ⡧⠀⢠⠃⠀⠀⠀⠀⠀⠀⡇⠀⠀⠀⠀⠀<br>
+                ⣿⠀⢸⠀⠀⠀⠀⠈⠙⣆⣧⣀⠀⠀⠀⠀<br>
+                ⣯⠀⠈⢧⠀⠀⠐⠚⢛⠏⡏⠉⠉⠁⠀⠀<br>
+                ⣗⠀⠀⠀⠙⠲⠤⠔⠋⠰⡇⠀⠀⠀⠀⠀<br>
+                ⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠁⠀⠀⠀⠀⠀<br>
+                ⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+            </p>
+            <p style="top: 29%; left: 70%;">
+                ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣴⣶⡀⠀⠀<br>
+                ⠀⠀⢠⣤⡀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣤⣾⠏⠘⠿⣦⣤<br>
+                ⠀⠀⣾⠉⠻⢶⠶⠛⢻⡇⠀⠀⠀⠘⢻⡦⠀⠀⢰⡾⠃<br>
+                ⢀⣤⠿⠀⠀⠀⠀⢠⡟⠁⠀⠀⠀⠀⠸⠷⠿⠿⣾⣷⠀<br>
+                ⢿⣥⣀⠀⠀⠀⠀⠀⢻⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
+                ⠀⠈⠉⣿⣀⣾⠟⠛⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
+                ⠀⠀⠀⠘⠛⠁⠀⠀⠀⠀⠀⢀⣾⢻⣆⡀⠀⠀⠀⠀⠀<br>
+                ⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⣾⠃⠀⠙⠛⣿⠇⠀⠀⠀<br>
+                ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠻⣶⡄⠀⠀⢸⣏⠀⠀⠀⠀<br>
+                ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢾⡷⠟⠛⠻⠿⠀⠀⠀⠀
+            </p>
+            <p style="right: 0;">
+                ⠀⠀⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
+                ⠀⠤⢥⠤⠀⠀⠀⠀⠀⠀⠀⢀⣠⡞⠳⣄⠀⠀⠀⠀⠀⠀⢀⢤⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
+                ⠀⠀⠘⠀⠀⠀⠀⠀⠀⠤⣶⣛⠉⠀⠀⢈⡳⠖⠀⠀⠀⠀⠘⠚⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
+                ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢿⡀⣰⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
+                ⠀⠀⠀⠀⠀⠀⠀⠀⢀⣠⠤⠤⠀⣧⠇⠀⠐⠦⢤⣀⠀⠀⠀⠀⢀⣤⠖⠒⠛⠛⠓⠂⠀⠶⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
+                ⠀⠀⠀⠀⠀⠀⢠⡶⠋⢀⡀⠀⠀⢻⠀⠀⠀⠤⡀⠈⠳⣄⣀⡴⠋⢀⠔⠈⠉⢉⣱⠀⢀⠤⡄⠈⠳⣤⠠⠤⠦⢤⡀⠀<br>
+                ⠀⠀⠀⠀⠀⣰⠋⢀⡔⠁⣸⠀⠀⠈⠀⠀⠀⠀⠘⢂⠀⠘⠋⠀⠐⠇⠰⠂⠉⠁⠀⠀⠈⠉⠀⠀⢠⠘⣧⠀⠀⠀⢻⡆<br>
+                ⠀⠀⠀⠀⠀⡟⠀⡼⠀⢠⠃⠀⠀⠀⠀⠀⠀⠀⠀⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡆⢸⡄⠀⠀⣼⠇<br>
+                ⠀⠀⠀⠀⠸⡇⠀⠣⣀⠞⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠠⠄⣸⠀⢀⣼⠋⠀<br>
+                ⠀⠀⠀⠀⠀⣷⠀⢀⡄⢢⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣰⢀⣯⡾⠛⠀⠀⠀<br>
+                ⠀⠀⠀⠀⠀⠹⣷⠀⠑⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡀⠀⠀⠀⢀⣠⢷⡟⠁⠀⠀⠀⠀⠀<br>
+                ⠀⠀⠀⠀⡇⠀⠹⣇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣰⢱⡀⠀⠀⠉⢰⡏⠀⠀⠀⠀⠀⠀⠀<br>
+                ⠀⠀⠉⠁⠆⠉⠀⢙⣷⣄⠰⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠠⠶⣚⠁⠀⢙⡶⢃⡴⠋⠀⢀⠀⠀⠀⠀⠀⠀<br>
+                ⠀⣠⠄⠀⠀⢀⣴⠋⠀⠙⢦⡙⢦⡀⠀⠀⠀⠀⠀⠀⠀⠀⢀⢀⠀⠀⠀⠀⠈⠳⡀⡜⡠⠊⠀⠀⣀⡘⣁⣀⠀⠀⠀⠀<br>
+                ⠀⠐⠁⠀⢀⡏⡏⠀⠀⠀⠀⠙⠶⣌⠓⠄⣀⠀⠀⠀⠀⡀⠼⣀⣀⠀⠀⠀⠀⠀⣷⠁⠀⠀⠀⠀⠀⠸⠇⠀⠀⠀⠀⠀<br>
+                ⠸⣁⡇⠀⠸⡇⠣⣀⠀⠀⠀⠀⠀⠈⠻⣦⣉⣄⡤⠔⠂⠀⠸⠀⠀⠀⠀⢀⡴⠒⠘⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
+                ⠀⠀⠀⠀⠀⠙⠶⢤⣭⣴⣦⣶⡾⠾⠟⠛⠙⢷⣄⡀⠀⠀⠀⠀⢀⡤⠞⠉⠀⠀⠀⢀⣠⣎⡁⢲⡄⠀⠀⠀⠀⠀⠀⠀<br>
+                ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡒⡂⠀⠈⠛⠲⣄⡴⠞⠁⠀⠀⠀⠀⠀⠀⠨⡌⢪⡿⠚⠁⠀⠀⠀⠀⠀⠀⠀<br>
+                ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡀⠉⠀⠀⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
+                ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠁⠰⣉⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+            </p>
+        </div>
+        <div id="welcome-card" class="visible">
+            <img src="media/selfie.jpg" alt="selfie">
+            <p id="selfie-drip">
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⣤⣤⣤⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
+⠀⠀⠀⠀⠀⠀⠀⠀⢠⣿⠋⠀⠀⠙⢿⣦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
+⠀⠀⠀⠀⠀⠀⠀⠀⣸⡇⠀⠀⠀⠀⠀⠙⢿⣦⡀⠀⠀⢀⣀⣀⣠⣤⣀⠀⠀<br>
+⠀⠀⠀⠀⠀⠀⠀⠀⣿⠇⠀⠀⠀⠀⠀⠀⠀⠙⠿⠿⠟⠛⠛⠋⠉⠉⠛⣷⡄<br>
+⠀⠀⠀⠀⠀⠀⠀⢠⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡇<br>
+⠀⠀⠀⠀⣀⣤⣶⠿⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⡿⠃<br>
+⠀⣠⣶⠿⠛⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⡿⠣⠀<br>
+⢸⡟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⡿⠁⠀⠀<br>
+⢸⣧⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⣷⡀⠄⠀<br>
+⠀⠙⠿⣶⣤⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⣷⡄⠀<br>
+⠀⠀⠀⠀⠉⠛⠿⣶⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⣿⡄<br>
+⠀⠀⠀⠀⠀⠀⠀⠘⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡇<br>
+⠀⠀⠀⠀⠀⠀⠀⠀⣿⡆⠀⠀⠀⠀⠀⠀⠀⣠⣶⣶⣦⣤⣤⣄⣀⣀⣤⡿⠃<br>
+⠀⠀⠀⠀⠀⠀⠀⠀⢹⡇⠀⠀⠀⠀⠀⣠⣾⠏⠀⠀⠀⠈⠉⠉⠙⠛⠉⠀⠀<br>
+⠀⠀⠀⠀⠀⠀⠀⠀⠘⣿⣄⠀⠀⣠⣾⠟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠛⠛⠛⠛⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+            </p>
+            <div>
+                <h2 class="highlight-on-hover">Gameplay Programmer</h2>
+                <h1 class="highlight-on-hover">Cae Borén</h1>
+                <h2 class="highlight-on-hover">Gameplay / Systems / Tools</h2>
             </div>
         </div>
-        <div class="site-container" style="height: 150rem;">
+        <div id="game-projects" class="section-content hidden">
             <div class="project-container">
-                <img src="project_frames/terrain_tool_frame.webp" class="project-frame terrain-tool-container">
+                <img src="project_images/m0ther.webp" class="project-image">
+                <img src="project_frames/m0ther_frame.webp" class="project-frame">
+                <div class="project-info">
+                    <div class="project-info-text-container">
+                        <h3>A dark but charming puzzle game about a supercomputer guiding packs of stupid creatures through a deadly testing faciliy</h3>
+                    </div>
+                    <i class="fa-brands fa-windows project-icon"></i>
+                    <img src="project_info/godot.svg" class="project-icon">
+                </div>
+            </div>
+            <div class="project-container">
+                <img src="project_images/entropy.webp" class="project-image">
+                <img src="project_frames/entropy_frame.webp" class="project-frame">
+                <div class="project-info">
+                    <div class="project-info-text-container">
+                        <h3>Winner of Swedish Game Awards 2025 <b>Game of the Year</b> & <b>Best Visuals</b></h3>
+                        <h3>Nominated for <b>Best Technology</b></h3>
+                    </div>
+                    <img src="project_info/unreal_engine.svg" class="project-icon ue">
+                    <i class="fa-brands fa-windows project-icon"></i>
+                    <img src="project_info/ps5.svg" class="project-icon ps5">
+                </div>
+            </div>
+            <div class="project-container">
+                <img src="project_images/slip_up_n_slide.webp" class="project-image">
+                <img src="project_frames/slip_up_n_slide_frame.webp" class="project-frame">
+                <div class="project-info">
+                    <div class="project-info-text-container">
+                        <h3>Penguin Couch Co-op Racing Game</h3>
+                        <h3>Developed in our in-house engine TenGine</h3>
+                    </div>
+                    <img src="project_info/tengine_text.webp" class="project-icon tengine">
+                    <i class="fa-brands fa-windows project-icon"></i>
+                    <img src="project_info/ps5.svg" class="project-icon ps5">
+                </div>
+            </div>
+        </div>
+        <div id="personal-projects" class="section-content hidden">
+            <div class="project-container">
                 <img src="project_images/terrain_tool.webp" class="project-image">
+                <img src="project_frames/terrain_tool_frame.webp" class="project-frame">
                 <div class="project-info">
                     <div class="project-info-text-container">
                         <h2>Specialization</h2>
@@ -63,52 +174,8 @@
                 </div>
             </div>
             <div class="project-container">
-                <img src="project_frames/m0ther_frame.webp" class="project-frame m0ther-container">
-                <img src="project_images/m0ther.webp" class="project-image">
-                <div class="project-info">
-                    <div class="project-info-text-container">
-                        <h2>Game Project</h2>
-                        <h3><br>Puzzle</h3>
-                        <h3>A dark but charming puzzle game</h3>
-                        <h3>about a supercomputer guiding packs of stupid creatures through a deadly testing faciliy</h3>
-                    </div>
-                    <i class="fa-brands fa-windows project-icon"></i>
-                    <img src="project_info/godot.svg" class="project-icon">
-                </div>
-            </div>
-            <div class="project-container">
-                <img src="project_frames/entropy_frame.webp" class="project-frame entropy-container">
-                <img src="project_images/entropy.webp" class="project-image">
-                <div class="project-info">
-                    <div class="project-info-text-container">
-                        <h2>Game Project</h2>
-                        <h3><br>Puzzle</h3>
-                        <h3>Winner of Swedish Game Awards 2025 new talent</h3>
-                        <h3>Game of the Year</h3>
-                        <h3>Best Visuals</h3>
-                    </div>
-                    <img src="project_info/unreal_engine.svg" class="project-icon ue">
-                    <i class="fa-brands fa-windows project-icon"></i>
-                    <img src="project_info/ps5.svg" class="project-icon ps5">
-                </div>
-            </div>
-            <div class="project-container">
-                <img src="project_frames/slip_up_n_slide_frame.webp" class="project-frame slip-up-n-slide-container">
-                <img src="project_images/slip_up_n_slide.webp" class="project-image">
-                <div class="project-info">
-                    <div class="project-info-text-container">
-                        <h2>Game Project</h2>
-                        <h3><br>Penguin Couch Co-op Racing Game</h3>
-                        <h3>Developed in our in-house engine TenGine</h3>
-                    </div>
-                    <img src="project_info/tengine_text.webp" class="project-icon tengine">
-                    <i class="fa-brands fa-windows project-icon"></i>
-                    <img src="project_info/ps5.svg" class="project-icon ps5">
-                </div>
-            </div>
-            <div class="project-container">
-                <img src="project_frames/personal_project_frame.webp" class="project-frame personal-project-container">
                 <img src="project_images/personal_project.webp" class="project-image">
+                <img src="project_frames/personal_project_frame.webp" class="project-frame">
                 <div class="project-info">
                     <div class="project-info-text-container">
                         <h2>Personal Project</h2>
@@ -122,10 +189,672 @@
                 </div>
             </div>
         </div>
+        <div class="m0ther site-welcome hidden" style="background-color: initial;">
+            <div class="welcome-text-container">
+                <h1>
+                    M0THER
+                </h1>
+                <h2 style="width: 50%; margin: auto; padding-top: 2rem;">
+                    A dark but charming puzzle game about a supercomputer guiding packs of stupid creatures 
+                    through a deadly testing facility
+                </h2>
+            </div>
+            <img src="m0ther_media/balloonify_gif.gif" class="welcome-gif" style="height: 70rem;">
+        </div>
+        <div class="m0ther site-container hidden">
+            <div class="project-item">
+                <div class="category-title">Info</div>
+                <p>
+                    <span><br>Genre:     </span> &nbsp;&nbsp;&nbsp;&nbsp;Puzzle
+                    <span><br>Team Size: </span> 10
+                    <span><br>Time:      </span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9 weeks
+                    <span><br>Engine:    </span> &nbsp;&nbsp;&nbsp;Godot
+                    <span><br>Platform:  </span> &nbsp;PC
+                </p>
+            </div>
+            <div class="project-item">
+                <div class="category-title">Blood System</div>
+                <div>
+                    <p>
+                        <br>I designed and implemented a blood system. It features a <b>custom particle 
+                        system</b> in order to get collision results for the particles, something which is 
+                        otherwise not possible in Godot.<br><br>
+
+                        Upon getting a collision result from a particle, an entry is added into a dictionary 
+                        which holds all the relevant information for a background thread to compute the UV 
+                        position of the hit. Getting the UV position is required to mask pixels around the 
+                        hit UV position which causes the shader I made to render the blood texture.<br><br>
+
+                        An important feature for us on the team was to have persistent blood in the 
+                        level, which would cause more and more blood to show for each retry. Because of 
+                        engine limitations it wasn't possible to find each mesh after reloading the level, 
+                        as all IDs would be re-generated. To circumvent this issue I simply store all the 
+                        successful raycasts in a dictionary and re-raycast them when pressing retry. This 
+                        causes the game to freeze as hundreds of raycasts are done on retry in some cases.
+                        My solution was to start a thread per mesh which allowed the operations to be 
+                        massively parallelized which hugely sped up the loading times. This, paired with a
+                        loading screen made the issue disappear.
+                    </p>
+                </div>
+            </div>
+            <div class="project-item">
+                <img src="m0ther_media/blood.webp" class="big-image">
+            </div>
+            <div class="project-item">
+                <div class="category-title">Settings</div>
+                <div>
+                    <p>
+                        <br>All of the settings as well as the settings UI functionality was implemented by me. 
+                        It features many video settings as well as some for audio and input.<br><br>
+
+                        The system uses Godot's ConfigFile which allows for the saved values to be stored, 
+                        loaded and modified across sessions via the settings menu. When loading the settings 
+                        script it tries to find the settings config file. If unsuccessful, a default one is 
+                        created and used instead. This realistically happens on the first start of the game. 
+                        Something important to me was for the user to have access to a wide range of settings. 
+                        These include screen mode, resolution, fps limit, VSync, motion blur, render scale and 
+                        shadow quality.<br><br>
+
+                        Some work also went into controlling the audio volume. This is done by directly 
+                        controlling FMOD VCAs. FMOD sometimes loads slowly so handling async loading of 
+                        the VCAs with scheduled retries was required.<br>
+                    </p>
+                </div>
+            </div>
+            <div class="project-item">
+                <img src="m0ther_media/settings.webp" class="big-image">
+            </div>
+            <div class="project-item">
+                <div class="category-title">Level Editor</div>
+                <div>
+                    <p>
+                        <br><b>Note:</b> this was cut because it didn't stay aligned with the vision of the project 
+                        as it evolved.<br><br>
+                        I built an in-engine grid-based 3D level editor designed for fast iteration and 
+                        non-destructive workflows. The editor runs directly inside the game and integrates 
+                        custom gizmos, snapping logic, undoable commands, multi-selecting and object duplication. 
+                        Alongside the level editor I had to build a system for saving levels locally. It also 
+                        exports previews of the levels, which was displayed in the level-selection screen.<br>
+                        The most difficult part to implement was a system to undo/redo any changes made 
+                        within the level editor. It uses two separate command stacks keeping track of undo and 
+                        redo histories. Commands are stored as dictionaries containing the command type, 
+                        affected nodes and an optional Variant (for example, transforms). This made it easy to 
+                        add new commands that could be be reversed with a single function call.
+                    </p>
+                </div>
+            </div>
+            <div class="project-item">
+                <img src="m0ther_media/level_editor.webp" class="big-image">
+            </div>
+            <div class="project-item">
+                <div class="category-title">Additional Contributions</div>
+                <p>
+                    <br>Additionally, I made a creature modification system which allows the user to click 
+                    on creatures and modify them. The system uses a switch on the selected modification and 
+                    heavily relies on tweening property values to keep the system readable for other group members.
+                    Based on the selected modification, the system handles things such as animating the 
+                    creature's scale, movement speed, offset from the ground and much more-
+                    everything required to go from cute little creature to a big cube to a balloon and back 
+                    to cute little creature!<br><br>
+                    
+                    On top of that I also made the animation blend trees for both types of creatures and 
+                    implemented parts of it in code, other parts were done by one of my groupmates.<br><br>
+
+                    I also developed a level switcher that works for all levels by keeping track of the 
+                    current level and simply changing the scene to the next level in the level list.<br><br>
+                    There are more areas that I worked on but all of which were quite small or simply me 
+                    helping others out with their code!
+                </p>
+            </div>
+        </div>
+        <div class="entropy site-welcome hidden">
+            <div class="welcome-text-container">
+                <h1>
+                    Entropy
+                </h1>
+                <h2 style="width: 50%; margin: auto; padding-top: 2rem;">
+                    A puzzle-platformer with horror elements, set in an ancient temple built around light-driven exploration.
+                </h2>
+                <h2 style="width: 35%; margin: auto; padding-top: 5rem;">
+                    Winner of Swedish Game Awards <b>Game of the Year</b> and <b>Best Visuals</b>
+                </h2>
+            </div>
+        </div>
+        <div class="entropy site-container hidden">
+            <div class="project-item">
+                <div class="category-title">Info</div>
+                <p>
+                    <span><br>Genre:     </span> &nbsp;&nbsp;&nbsp;&nbsp;Puzzle
+                    <span><br>Team Size: </span> 16
+                    <span><br>Time:      </span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9 weeks
+                    <span><br>Engine:    </span> &nbsp;&nbsp;&nbsp;Unreal Engine 5
+                    <span><br>Platform:  </span> &nbsp;PC & PlayStation 5
+                </p>
+            </div>
+            <div class="project-item">
+                <div class="category-title">Controller Integration (DualSense)</div>
+                <p>
+                    <br>I worked with the <span>Sony PlayStation 5 SDK</span> to implement<br>
+                    audio, rumble, audio-based rumble, lightbar colors and adaptive triggers for 
+                    DualSense controllers.<br><br>
+                    Since this is all covered by an <span>NDA signed with Sony</span>, I will not share anything 
+                    regarding the implementation.
+                </p>
+            </div>
+            <div class="project-item">
+                <div class="category-title">Settings</div>
+                <p>
+                    <br>All of the settings functionality is implemented by me, except for the UI. 
+                    It has some video, audio and input settings.<br><br>
+                    The system uses Unreal Engine's SaveGame object which allows for the saved values 
+                    to be stored, loaded and modified across sessions via the settings menu. This system 
+                    is quite basic as Unreal Engine makes it very easy to save data across sessions 
+                    using Blueprints.
+                </p>
+            </div>
+            <div class="project-item">
+                <div class="category-title">Interactive insect VFX</div>
+                <div class="description-and-image-container">
+                    <p>
+                        <br>A problem we had in Entropy was a lack of situational awareness because of how dark 
+                        the game is, and we didn't want to increase the brightness as that would ruin the 
+                        immersion and feel we wanted. The idea I came up with was having <span>thousands of glowing 
+                        insects</span> crawling on the walls, floors and ceilings of the levels. We didn't want them 
+                        to constantly glow so we settled for having <span>them absorb the light</span> you, as the player 
+                        would emit from the light gun. Having them behave like old light switches that would 
+                        glow in the dark meant that we could keep our environment dark and use emissive 
+                        materials on the insects to <span>help the player orient</span> themselves.<br><br>
+
+                        Because we wanted them to interact with the light orbs the player would shoot, I 
+                        originally designed the system using Blueprints but quickly switched to using Niagara, 
+                        Unreal Engine's particle system. This was because it would be highly inefficient to 
+                        update potentially tens of thousands of insects on the CPU. The insects use <span>signed 
+                        distance fields</span> to traverse on meshes in the world and walk around pretty mindlessly 
+                        using various forces. 
+                        
+                        <br><br>Implementing interactivity with code was a daunting task that 
+                        actually proved to be quite easy using Blueprints. I also struggled a bit with creating 
+                        custom <span>scratch modules</span> that allowed me to significantly simplify the particle update 
+                        state by <span>hiding complicated code</span> beneath easily understandable function names. With all 
+                        of this I managed to make the insects flee from the player as well as the impact of the light 
+                        orbs. Making them glow temporarily after being exposed to light was achieved through the use of a 
+                        custom scratch module that updates the particle color in the material the insects use.
+
+                        <br><br>This was a whole adventure into interactive visual systems and learning Niagara, which 
+                        I really turned out to enjoy using! What I found coolest was how easy it was to change 
+                        variables from code as well as it being possible to call a Blueprint function from the 
+                        VFX system itself!<br>
+                    </p>
+                </div>
+            </div>
+            <div class="project-item">
+                <img src="entropy_media/entropy_bugs.gif" class="big-image">
+            </div>
+            <div class="project-item">
+                <div class="category-title">Glowing Interactables</div>
+                <p>
+                    <br>Following the theme of glowing stuff, I made it possible for everything that is a <i>socket</i> to light 
+                    up when a light orb is attached.
+
+                    <br><br>I implemented it as a class that anything can inherit and the <i>orb_hit()</i> function would automatically
+                    connect to it through a function interface. This then starts a lerp that gradually changes shader parameters for the material,
+                    causing it to glow brighter and brighter, until it reaches its maximum strength. The exact same thing but in the opposite direction
+                    is done when an orb is removed from the socket.
+
+                    <br><br>This system makes it very clear when the player does something that progresses them in the level- such as opening 
+                    a door, causing a platform to move or similar things.
+                </p>
+            </div>
+            <div class="project-item">
+                <div class="category-title">Additional Contributions</div>
+                <p>
+                    <br>In addition to my main tasks, I also implemented the initial version of the character 
+                    controller, a small system that made placing interactive sounds into the levels easy for 
+                    designers and just generally helped out a bunch!<br><br>
+                    
+                    For this project, I would call myself more of a generalist as I didn't work on that many 
+                    specialized features, which means that this page is rather empty. See 
+                    M0THER, my most recent game project for more specialized work.
+                </p>
+            </div>
+        </div>
+        <div class="slip-up-n-slide site-welcome hidden">
+            <div class="welcome-text-container">
+                <h1>
+                    Slip Up N Slide
+                </h1>
+                <h2 style="width: 50%; margin: auto; padding-top: 2rem;">
+                    Slip-Up N Slide is a chaotic split-screen multiplayer racing game about finding your own path down a slippery track with chaotic physics and interactive hazards.
+                </h2>
+                <h3><br>Made in PlaygroundSquad's in-house C++ engine.</h3>
+                <h3><br>We implemented Jolt Physics for this game, which totally rules!</h3>
+            </div>
+        </div>
+        <div class="slip-up-n-slide site-container hidden">
+            <div class="project-item">
+                <div class="category-title">Info</div>
+                <p>
+                    <span><br>Genre:     </span> Racing
+                    <span><br>Engine:    </span> TenGine
+                    <span><br>Team Size: </span> 12
+                    <span><br>Platforms: </span> PC & PS5
+                    <span><br>Time:      </span> 6 weeks
+                </p>
+            </div>
+            <div class="project-item">
+                <div class="category-title">Split-Screen Multiplayer</div>
+                <p>
+                    <br>For this project, the biggest task I had was to implement local split-screen 
+                    multiplayer.
+
+                    <br><br>This task involved setting up multiple cameras dynamically depending on the amount of 
+                    connected controllers, the function for which handles different pre-determined 
+                    configurations of viewport sizes and placements. The system seamlessly handles between 
+                    one and four users and doesn't require any user input at all.
+                    
+                    <br><br>Something which was difficult at first was rewriting our singleplayer logic into 
+                    something which worked for different amounts of players. I solved this while 
+                    <span>keeping our project structure the same</span> by converting all of the player-related 
+                    variables into arrays which were indexed with the controller ID. The solution felt 
+                    very seamless and let the other programmers on the team keep working as usual 
+                    without having to pay attention to any new systems or big changes to the code.
+                    
+                    <br><br>Spawning the players when loading into the level is done in a similar fashion, 
+                    where the controller ID determines which <i>PlayerStart</i> object to spawn the 
+                    player at. This allows designers to simply tag an empty object in Tensor with the 
+                    <i>PlayerStart</i> tag. (Tensor is the editor for TenGine!)
+                </p>
+            </div>
+            <div class="project-item">
+                <div class="category-title">Environmental Power-Ups & Hazards</div>
+                <div class="description-and-image-container">
+                    <p class="description-shared_with_image">
+                        <br>In Slip Up N Slide we wanted the world to be interactive and give life to 
+                        otherwise mundane parts of the world by making them affect how you play.
+
+                        <br><br>To do this, I made the penguin character bounce when it hit balloons, allowing you to 
+                        shortcut the route! I also made snow piles slow the penguin down and I added speed 
+                        boosters that would cause the penguin to go faaast!
+
+                        <br><br>Since the game uses the <span>Jolt Physics</span> engine, all of these power-ups simply affect the 
+                        velocity of the player in different ways, the hardest part was actually the collision 
+                        detection- something which had to be implemented using Jolt.
+                    </p>
+                    <img src="slip_up_media/powerup.webp" class="image-shared-with-description">
+                </div>
+            </div>
+            <div class="project-item">
+                <div class="category-title">Controller Haptics</div>
+                <div>
+                    <p>
+                        <br><span>Note:</span> this is all protected by an <span>NDA</span> so I will be brief.
+
+                        <br><br>A cool-factor that we wanted for the game was proper utilization of the <b>DualSense</b> 
+                        controllers for the <span>PlayStation 5</span>. I gladly took it upon myself to create a kick-ass 
+                        class that handled all controller features we needed and more-
+
+                        <br><br>As controller input is implemented in TenGine, I did not work on that part. I did 
+                        however implement rumble, lightbar color support, gyro support and a huge range of 
+                        different adaptive trigger modes.
+                        
+                        <br><br>The gyro didn't end up being used but the rest was. For example, rumble is triggered 
+                        when crashing into snowpiles and is also paired with an adaptive trigger mode that 
+                        vibrates the triggers on the controller, causing the crashes to feel impactful! 
+                        Lightbar colors were made to match the color of the penguin character when playing
+                        with more than one player.
+                    </p>
+                </div>
+            </div>
+            <div class="project-item">
+                <div class="category-title">Animation Blending</div>
+                <p>
+                    <br>I implemented all of the animations in the game, which included creating a state 
+                    machine to get what the wanted animation is at any given time. If that didn't match 
+                    the current animation, a lerp between the two was started and the resulting matrices 
+                    for each joint was uploaded to the shader and affected vertices were be displaced 
+                    accordingly.
+                </p>
+            </div>
+            <div class="project-item">
+                <div class="category-title">Additional Contributions</div>
+                <p>
+                    <br>I tried to implement a <span>ragdoll system</span> that would be used during hard crashes but did 
+                    not manage to get the joints of the model to update properly so it unfortunately got dropped. 
+                    The ragdolling worked by iterating over the penguin's joints and building Jolt Physics bodies 
+                    with constraints between them and simulating the physics bodies. The plan was to use the 
+                    physics body position and update the penguin's joints' positions to match them. This didn't 
+                    work with how the engine handled parent-child transforms. I decided to therefore scrap the 
+                    feature as we didn't have the time needed to get the feature across the finish line.
+                    
+                    <br><br>Because TenGine is so rudimentary and old-school, a lot of time and effort went into simple 
+                    things such as loading scenes and figuring out how to implement particles into the project.
+                </p>
+            </div>
+        </div>
+        <div class="terrain-tool site-welcome hidden">
+            <div class="welcome-text-container" id="welcome-text">
+                <h1>
+                    Terrain Tool
+                </h1>
+                <h2>
+                    Marching Cubes in-editor Tool for Game Terrain<br>
+                    Developed in 4 weeks
+                </h2>
+            </div>
+        </div>
+        <div class="terrain-tool site-container hidden">
+            <div class="project-item">
+                <div class="category-title">Marching Cubes</div>
+                <div>
+                    <p>
+                        <br>The terrain tool uses <span>marching cubes</span> to convert a 3D grid of numerical values 
+                        (iso values) into a mesh.
+                        
+                        <br><br>Marching cubes work by iterating each voxel in the desired area and by encoding the 
+                        iso value of each corner as a bit in an 8-bit integer, a <i>cube configuration index</i>. 
+                        It is used to look up <i>edge indices</i> in a <i>triangulation table</i>.
+                        The result from the look up can look like this:<br>
+                        [0, 11, 2, 8, 11, 0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1]<br>
+                        where each triangle has 3 indices which means that we can create a for-loop with a step 
+                        size of 3 to iterate over the edge indices in order to create triangles. 
+                        
+                        <br><br>In a blocky fashion, the center point between <i>edge index a</i> and <i>edge index b</i> can be 
+                        used to generate vertex positions but in order to smoothen the mesh, the vertex position 
+                        can be <span>interpolated between the two edge indices based on the iso values they correspond 
+                        to</span>. This will cause the surface of the generated mesh to be positioned exactly where the 
+                        iso grid transitions from above the <i>surface value</i> to below the <i>surface value</i>, 
+                        <span>resulting in smoother terrain</span>.
+
+                        <br><br>When generating blocky terrain, vertices are duplicated for each face in order to allow 
+                        for flat-shaded terrain. For the smooth terrain, I am generating indices which allows 
+                        the terrain to easily share normals as well as to <span>reduce the vertex count</span>. The 
+                        normals are calculated by taking all of the connected faces' normals and averaging 
+                        them together.
+                    </p>
+                </div>
+            </div>
+            <div class="project-item">
+                <div class="description-and-image-container">
+                    <img src="terrain_tool_media/blocky_terrain.webp" style="width: 50%;">
+                    <img src="terrain_tool_media/smooth_terrain.webp" style="width: 50%;">
+                </div>
+                <p>Showing difference between center of edge interpolation and iso value interpolation for vertices.</p>
+            </div>
+            <div class="project-item">
+                <div class="category-title">Plugin Development</div>
+                <div class="description-and-image-container">
+                    <p>
+                        <br>To allow for creating terrain in the Godot editor, a plugin had to be created. 
+                        Plugins are loaded on startup and scripts marked as tools are able to run inside of 
+                        the editor.<br><br>
+                        
+                        <i>_forward_3d_gui_input()</i> is a function which can be overridden to provide an input 
+                        event for anything happening inside of the 3D viewport. This is used to handle button 
+                        presses in order to create chunks of terrain. To do this, a plane is created at the world 
+                        origin at height 0 which a ray in intersected with to figure out where to place the chunk. 
+                        To prevent chunk placement every time one would click in the viewport, this code only 
+                        runs when the custom <i>Terrain</i> node is selected inside of the hierarchy, <span>allowing 
+                        easy control of terrain management without interfering with normal editor usage</span>.
+
+                        <br><br>Similar work went into painting the mesh, which meant altering the iso grid values to 
+                        cause the terrain to generate differently. Instead of intersecting a ray against a plane, 
+                        an intersection test against the terrain mesh itself had to take place. Luckily, Godot 
+                        makes it really easy to generate a trimesh collider for objects (only one line of code!) 
+                        so that was no issue. 
+                        
+                        <br><br>The hard part was implementing the changes to the iso grid as well 
+                        as regenerating chunks properly. For this, two different kinds of brushes were created, 
+                        one for painting square shapes and one for spherical shapes. The iso grid values around 
+                        the intersection point are altered gradually to be under what is considered the surface 
+                        threshold. A problem was encountered as painting along the edges of a chunk would cause 
+                        a harsh cutoff; <span>the neighboring chunks weren't being regenerated</span>. To solve this, when an 
+                        iso value passes from under the surface threshold to above, or the opposite, the 
+                        local X and Z coordinates within the chunks are sampled to detect if the iso value 
+                        is on a border. If it is, the chunk located in the borders direction is added to a list 
+                        of affected chunks. If two chunks gets added to the list, for both the X and Z axes- a 
+                        chunk would also have to be regenerated on the diagonals. So this is naturally handled 
+                        as well.
+
+                        <br><br>To make usage of the tool easy, work went into making a <span>custom dock</span> for the editor. 
+                        Godot has excellent support for creating your own custom UI that can be integrated with 
+                        the engine and made to work just like their own UI. I decided to create a custom dock 
+                        designed to be positioned next to the Inspector. Then, functionality was added to to it 
+                        by creating buttons that allows the user to select the chunk management tool or the 
+                        paint tool. Both of these have their own set of buttons and inputs to control the 
+                        type of terrain created, chunk size or brush type, brush strength, height, width, radius 
+                        and so on. 
+                    </p>
+                </div>
+            </div>
+            <div class="project-item">
+                <div class="description-and-image-container">
+                    <img src="terrain_tool_media/paint_mesh.webp" style="width: 50%; padding: 2rem;">
+                    <img src="terrain_tool_media/manage_chunks.webp" style="width: 50%; padding: 2rem;">
+                </div>
+            </div>
+            <div class="project-item">
+                <div class="category-title">Procedural Terrain Demo</div>
+                <p>
+                    <br>When working on this project, something that was always in the back of my mind was 
+                    how cool it'd be to utilize this fancy meshing algorithm with procedural generation; as 
+                    it is something I find quite fascinating! This part of the project became a small bonus 
+                    feature as I did not expect to finish the marching cube algorithm as well as the mesh 
+                    painting as fast as I did.<br>
+                    <span>See this as a demo of what the tool/algorithm could be used for, more so than an 
+                    actual finished thing</span>.
+
+                    <br><br>To make procedural terrain that was easily usable while still keeping to the in-engine 
+                    workflow, I decided to add on to the chunk management part of the tool. I added a couple 
+                    buttons that show up in the dock that allows for creating of terrain which adheres 
+                    to pre-determined generation rules. So depending on which terrain option that is 
+                    selected, a noise algorithm generates an iso value which is then be processed in 
+                    certain ways, such as fading out the terrain towards the top of the chunk. <br>To get 
+                    procedurally generated terrain for this tool I simply used a mix of <span>2D and 3D perlin 
+                    noise</span>, depending on the terrain type. More effort went into <span>blending chunks</span>
+                    into each other properly- which first was an issue because the mesh fadeout I implemented 
+                    towards the edges of the chunks used a linear fadeout across the entire chunk. This meant 
+                    that the edge at the opposite side of the chunk from which it fades from would be altered, 
+                    something which wouldn't be applied to the neighboring chunks and therefore cause a 
+                    desync in the processed noise values at the borders. I fixed this by implementing a 
+                    smoothstep that is more aggressive towards the start of the border and completely 
+                    moot at the end of the border.
+
+                    <br><br>The results of this kind of terrain can be seen below.
+                </p>
+            </div>
+            <div class="project-item">
+                <div>
+                    <img src="terrain_tool_media/procedural_terrain.webp" style="width: 100%;">
+                </div>
+            </div>
+        </div>
+        <div class="personal-project site-container hidden">
+            <div class="project-item">
+                <div class="category-title">GPS-Based OpenStreetMap Viewer</div>
+                <div class="description-and-image-container">
+                    <p>
+                        <br>I built a map viewer to stream and render map tiles from <span>OpenStreetMap</span> (OSM) inside 
+                        the game, driven by the GPS coordinates of the phone it runs on.
+
+                        <br><br>The system is dependent on <span>PraxisMapperGPSPlugin</span>, a plugin that allows for starting 
+                        the GPS service and getting updates to the <i>_on_gps_update()</i> function but not much 
+                        else.
+                        
+                        <br><br>The longitude and latitude of the player are passed to the GPS update function, 
+                        from which a new center is set, calculated using the <span>Web Mercator projection</span>. 
+                        The world is positioned around it accordingly- every tile that is rendered is offset 
+                        from the center.
+
+                        <br><br>The actual map tiles within a configurable X/Y range around the center tile are fetched 
+                        from OSM using their respective X and Y coordinates, as well as the zoom 
+                        level; a URL is constructed in the format 
+                        <i>https://tile.openstreetmap.org/{z}/{x}/{y}.png</i> and requested with an 
+                        <span>HTTP request</span>. The result is <span>fetched asynchronously</span> so I bind the 
+                        <i>request_completed</i> signal to a function that handles converting the fetched 
+                        image to an ImageTexture, which is stored in a dictionary keyed by its tile coordinates. 
+                        This is handy to be able to render it at the correct offset from the <i>center_tile</i> 
+                        in the <i>_draw()</i> function.
+                        
+                        <br><br>I made sure to only issue an HTTP request to OpenStreetMap if the tile doesn't exist 
+                        in a <i>requested_tiles</i> dictionary. I also make sure to only fetch tiles that haven't 
+                        been fetched and processed. This <span>prevents duplicate network calls</span> drastically.
+                        
+                        <br><br>Initially, I was setting the center position directly as the player would move but I 
+                        noticed that this caused the entire map to jump as a new position would be fetched. To 
+                        fix this, I store 
+                        <i>lerp_start</i> and <i>target_center</i> and increment a lerp alpha value each frame 
+                        in <i>_process()</i>. The center tile is interpolated smoothly over time, which makes 
+                        GPS updates feel <span>stable and intentional</span> rather than jittery. All rendering is 
+                        handled manually in <i>_draw()</i>, where each tile's screen position is calculated 
+                        relative to the current center tile and viewport size.
+                    </p>
+                </div>
+            </div>
+            <div class="project-item" style="margin: auto;">
+                <div class="description-and-image-container" style="height: 70rem; display: flex; justify-content: center;">
+                    <img src="personal_project_media/world.png">
+                </div>
+            </div>
+            <div class="project-item full-size">
+                <div class="category-title">World Objects & Custom Animation System</div>
+                <div>
+                    <p>
+                        <br>On top of the streamed map, I added a world object system that spawns interactable 
+                        objects directly onto tiles.
+
+                        <br><br>Objects spawn at random intervals and on random visible tiles. Each object is stored as 
+                        a dictionary containing its texture, a random local offset within the tile, and animation 
+                        state data such as <i>curr_frame</i>, <i>array_index</i>, and activation flags.
+                        
+                        <br><br>Instead of using Godot's built-in animation tools, I implemented a fully custom animation 
+                        pipeline. During draw time, I extract the texture's filename from its resource path using 
+                        a regular expression. That name determines which sprite array to sample from. Because 
+                        animation selection happens at render time, I can easily transition objects between 
+                        animation states by incrementing their <i>array_index</i>. I want to highlight that this 
+                        was a completely unnecessary way of going about this. Normally in Godot, a node with 
+                        animation capabilities would be used to skip all of the hassle of setting up such a system 
+                        but since this was the first time I used Godot, I wasn't aware of all the features within 
+                        the engine- which lead to me making some custom functionality for things that did not need 
+                        it.
+
+                        <br><br>A good example for my object/animation system is the portal object. It starts by sampling 
+                        frames from an activation array- containing frames of the portal opening up. Before this 
+                        is done, it cannot be interacted with. When the final frame is reached, I mark the object 
+                        as activated and increment the array index so that subsequent frames are pulled from a 
+                        looping <i>portal_on</i> sprite array. The animation logic and state transition is handled 
+                        entirely through data stored in the object dictionary.
+
+                        <br><br>Click handling is done manually using an <span>AABB intersection</span> test against each 
+                        object's calculated screen position. I added a configurable pixel buffer to expand 
+                        the AABB and make touch input more forgiving on mobile devices for smaller objects. 
+                        When an intersection is detected, I branch behavior based on the item clicked; 
+                        rocks are added to the player's inventory, while an activated portal triggers a scene 
+                        change to the dungeon.
+
+                        <br><br>The result is a system where real-world geography becomes the foundation for gameplay. 
+                        The map streams live data, objects spawn dynamically on top of it, and animation and 
+                        interaction are adequately controlled.
+                    </p>
+                </div>
+            </div>
+            <div class="project-item">
+                <div class="category-title">Procedural Dungeons</div>
+                <div>
+                    <p>
+                        <br>When clicking on a dungeon, I change the scene from the world-map to a scene in 
+                        which a dungeon is generated procedurally. I wanted to experiment with this as I was 
+                        simply having fun with Godot at this point in the project- therefore I mostly winged 
+                        the entire dungeon generation algorithm.
+
+                        <br><br>I did however not wing everything as I implemented a <span>Binary Space Partioning</span> 
+                        algorithm (BSP) to recursively subdivide the 2D space which made up the level. It splits 
+                        the level into two parts for each pass, alternating between splitting the rooms 
+                        horizontally and vertically. This creates a simple but quick and easy dungeon-like level. 
+                        I used TileSets to visualize the result from this algorithm and I implemented an 
+                        <span>autotiler</span>, which checks the neighboring cells to determine what kind of tile to 
+                        place at any given location. Generating pathways between rooms was quite simple as I 
+                        implemented a recursive function that would get a random start-point along the edge of 
+                        <i>room a</i> and traverse into <i>room b</i>, changing the values of the cells in the 
+                        TileSet.
+
+                        <br><br>For the dungeon generation, I also added simple water pools that would appear randomly 
+                        and with random sizes. Finally, I added a chance to spawn pots next to the walls that 
+                        breaks when the player walks on them! Enemies are also be spawned, but 
+                        completely randomly unlike the pots.
+                    </p>
+                </div>
+            </div>
+            <div class="project-item" style="margin: auto;">
+                <div class="description-and-image-container" style="height: 50rem;">
+                    <img src="personal_project_media/dungeon1.png" style="width: auto; margin-left: auto; margin-right: 5rem; aspect-ratio: 9/16;">
+                    <img src="personal_project_media/dungeon2.png" style="width: auto; margin-right: auto; margin-left: 5rem; aspect-ratio: 9/16;">
+                </div>
+            </div>
+            <div class="project-item full-size">
+                <div class="category-title">Inventory & Combat</div>
+                <div class="description-and-image-container">
+                    <p>
+                        <br>Because I wanted to create a small mini-rpg demo I needed items as well as enemies 
+                        and combat.
+
+                        <br><br>To be able to use and recieve items, an inventory was needed. This was made with simple 
+                        Godot UI and uses the <span>ConfigFile</span> class in Godot to store items in sections 
+                        named <i>items</i>, <i>equipped</i> and <i>resources</i>. Items and resources contains 
+                        things you've picked up while the equipped section is used to tell what weapons and 
+                        armour is currently used by the player. On ready, the <i>_load_config()</i> function 
+                        is called which loops through the sections saved in the file and calls functions on 
+                        them to populate item lists and set the equipped items in local variables. The reverse 
+                        is done for saving to the config, where local variables are be added to the file 
+                        and stored in a file on the device. Picking up items and eqipping them was as simple as 
+                        updating the <i>items</i> variable and calling the <i>save_config()</i> function.
+
+                        <br><br>With items implemented the next step was combat! <br>
+                        Most of the work went into making the visuals of the combat work as attacking and 
+                        blocking didn't take much time to implement at all. This is honestly quite poorly 
+                        implemented as I used lerps and timeouts for every single thing- something which I don't 
+                        feel is inherently wrong but using the <span>AnimationPlayer</span> would be significantly 
+                        easier and faster to use. During the project, I wasn't aware of how immensely useful a 
+                        tool like it could be and it wasn't until working on M0THER
+                        that I learned that these things should take advantage of the AnimationPlayer. 
+                    </p>
+                </div>
+            </div>
+            <div class="project-item" style="margin: auto;">
+                <div class="description-and-image-container" style="height: 50rem;">
+                    <img src="personal_project_media/battle1.png" style="width: auto; margin-left: auto; margin-right: 5rem; aspect-ratio: 9/16;">
+                    <img src="personal_project_media/battle2.png" style="width: auto; margin-right: auto; margin-left: 5rem; aspect-ratio: 9/16;">
+                </div>
+            </div>
+        </div>
+        <div class="about-me site-welcome hidden" style="height: fit-content;">
+            <div class="welcome-text-container" id="welcome-text">
+                <h1 class="secondary-font-color">
+                    About Me
+                </h1>
+            </div>
+        </div>
+        <div class="about-me site-container hidden">
+            <div id="about-container">
+                <img src="other_media/selfie.webp" id="selfie">
+                <div id="about-me-text-container">
+                    <p>My name is Cae, I'm a game programmer student at PlaygroundSquad, Falun.</p>
+                    <p><br>When working on games I like doing a wide range of tasks, from coding game mechanics to split screen to VFX and fancy over-engineered blood systems! (Check out M0THER!)</p>
+                    <p><br>Outside of games I enjoy climbing plastic rocks! With my friends!!</p>
+                    <p>Totally do grab a peek at me falling below</p>
+                    <p style="font-size: smaller; font-style: italic;">ouch >.<</p>
+                </div>
+            </div>
+            <div id="climbing-container">
+                <img src="other_media/climbing.webp" id="climbing" style="width: 100vw;">
+            </div>
+        </div>
+        </div>
+        <!-- <div id="scroll-arrow-container">
+            <p>-></p>
+        </div> -->
     </main>
     <footer>
-        Hi! It looks like you've reached the end of this page. If you're interested in what I do, feel free to send me a DM on LinkedIn!
+
     </footer>
 </body>
-
 </html>

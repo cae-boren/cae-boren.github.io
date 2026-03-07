@@ -1,0 +1,232 @@
+:root {
+    --welcome-height: 70rem;
+}
+
+.project-container {
+    position: relative;
+    margin: auto;
+    aspect-ratio: 16/9;
+    width: 50%;
+    height: 30%;
+    border-radius: 0.5rem;
+    background-color: var(--container-background-color);
+}
+
+.project-frame {
+    z-index: 1;
+    pointer-events: none;
+    position: absolute;
+    top: 2.5%;
+    left: 2.5%;
+    width: 95%;
+    height: 95%;
+    background-position: 50% 69%;
+
+    filter: grayscale(100%) brightness(150%);
+    transition: filter 0.3s ease;
+}
+
+.project-image {
+    z-index: 0;
+    position: absolute;
+    top: 21%;
+    left: 5.4%;
+    width: 89.1%;
+    height: 70%;
+    filter: brightness(100%);
+
+    transition: filter 0.3s ease;
+}
+
+.project-image:hover {
+    cursor: pointer;
+
+    filter: brightness(20%);
+}
+
+.project-image:hover + .project-frame {
+    filter: grayscale(0%) brightness(100%);
+}
+
+.project-info {
+    pointer-events: none;
+    opacity: 0.0;
+    margin: 15% 10% 10% 10%;
+
+    transition: opacity 0.3s ease;
+}
+
+.project-info-text-container * {
+    width: 80%;
+    text-wrap-mode: wrap;
+    text-shadow: 1px 1px 1px #000000;
+}
+
+.project-info * {
+    position: relative;
+    z-index: 1;
+}
+
+.project-icon {
+    position: absolute;
+    right: 6%;
+    bottom: 10%;
+    height: 15%;
+    font-size: 6rem;
+}
+
+.fa-linux {
+    color : white;
+    left: 19rem;
+}
+
+.fa-apple {
+    color : white;
+    left: 26rem;
+}
+
+.fa-windows {
+    color: #396FD4;
+    left: 5rem;
+}
+
+.fa-android {
+    color: #a4c639;
+    left: 12rem;
+}
+
+.android-solo {
+    left: 5rem;
+}
+
+.ps5 {
+    filter: invert();
+    left: 12rem;
+}
+
+.ue {
+    filter: invert();
+}
+
+.tengine {
+    scale: 150%;
+    right: 8rem;
+}
+
+.site-container {
+    padding: 0;
+}
+
+.project-item {
+    width: 50%;
+    margin: auto;
+    padding: 3rem;
+    background-color: var(--container-background-color);
+    box-shadow: var(--pop-out-shadow);
+}
+
+.project-item p {
+    font-size: 2rem;
+    font-weight: 200;
+}
+
+.project-item p span {
+    color: var(--hero-color);
+}
+
+.category-title {
+    font-size: 4rem;
+}
+
+.description-and-image-container {
+    display: flex;
+}
+
+.description-shared_with_image {
+    width: 50%;
+    padding-right: 5rem;
+    margin: auto;
+}
+
+.image-shared-with-description {
+    width: 50%;
+    object-fit: contain;
+}
+
+.big-image {
+    padding: 0;
+    width: 100%;
+}
+
+.site-welcome {
+    background-color: var(--container-background-color);
+    width: 100%;
+    height: var(--welcome-height);
+    display: flex;
+    flex-direction: column;
+}
+
+.welcome-gif {
+    position: absolute;
+    top: var(--navbar-height);
+    width: 100%;
+    height: var(--welcome-height);
+    z-index: -1;
+
+    filter: brightness(30%);
+}
+
+.welcome-text-container {
+    text-align: center;
+    position: relative;
+    top: 30%;
+
+    transition: opacity 0.5s ease-out;
+}
+
+.welcome-text-container h1 {
+    font-size: 6rem;
+    margin: 0;
+}
+
+.welcome-text-container h2 {
+    font-size: 3rem;
+}
+
+#about-container {
+    height: 70rem;
+    display: flex;
+}
+
+#selfie {
+    width: auto;
+    height: 75%;
+    padding: 5rem 5rem 5rem 15%;
+}
+
+#about-me-text-container {
+    margin: auto 0 auto 0;
+    flex-direction: column;
+    width: 50%;
+    font-size: large;
+    text-align: center;
+    background-color: var(--container-background-color);
+}
+
+@media only screen and (max-width: 700px) {
+    #selfie {
+        width: 75%;
+        height: auto;
+        margin: auto;
+    }
+
+    #about-me-text-container {
+        margin: auto;
+        padding-bottom: 5rem;
+    }
+
+    #about-container {
+        height: fit-content;
+        flex-direction: column;
+    }
+}
