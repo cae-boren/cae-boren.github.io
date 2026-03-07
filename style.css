@@ -60,7 +60,6 @@ header {
     display: flex;
     position: sticky;
     top: 0;
-    width: 100vw;
     height: var(--header-height);
     background-color: var(--container-background-color);
     font-weight: lighter;
