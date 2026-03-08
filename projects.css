@@ -245,4 +245,8 @@
     .project-item {
         width: 95%;
     }
+
+    .welcome-text-container h2 {
+        font-size: 2rem;
+    }
 }
