@@ -213,6 +213,18 @@
     background-color: var(--container-background-color);
 }
 
+@media only screen and (max-width: 1500px) {
+    .project-item {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .project-item {
+        width: 90%;
+    }
+}
+
 @media only screen and (max-width: 700px) {
     #selfie {
         width: 75%;
@@ -228,5 +240,9 @@
     #about-container {
         height: fit-content;
         flex-direction: column;
+    }
+
+    .project-item {
+        width: 95%;
     }
 }
