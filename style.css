@@ -13,6 +13,7 @@
 
     --header-height: 8vh;
     --header-item-margin: 2rem;
+    --header-span-margin: 2rem 0.5rem 2rem 0.5rem;
 }
 
 *,
@@ -91,7 +92,7 @@ header > nav > a:hover {
 
 .header-divider {
     cursor: default;
-    padding: 2rem 0.5rem 2rem 0.5rem;
+    padding: var(--header-span-margin);
 }
 
 #background-fluff-container {
@@ -214,10 +215,57 @@ header > nav > a:hover {
 }
 
 @media only screen and (max-width: 1200px) {
-    /* header nav {
-        margin-right: 0;
-    } 
-        MAKE BURGER MENU    
-    */
+    header {
+        font-size: 1.5rem;
+    }
 }
 
+@media only screen and (max-width: 1000px) {
+    header nav a {
+        padding: calc(var(--header-item-margin) / 2);
+    }
+
+    .header-divider {
+        padding: 1rem 0.5rem 1rem 0.5rem;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    header nav a {
+        padding: calc(var(--header-item-margin) / 4);
+    }
+
+    .header-divider {
+        padding: .5rem 0.5rem .5rem 0.5rem;
+    }
+}
+
+@media only screen and (max-width: 780px) {
+    header {
+        position: relative;
+    }
+
+    header nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-left: 150px;
+    }
+
+    header nav a {
+        padding: 0.4rem 0.6rem;
+    }
+
+    .header-divider {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    #welcome-card {
+        left: 0;
+    }
+
+    #selfie-drip {
+        display: none;
+    }
+}
