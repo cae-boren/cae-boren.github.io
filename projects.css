@@ -217,11 +217,19 @@
     .project-item {
         width: 80%;
     }
+
+    .welcome-text-container {
+        top: 20%;
+    }
 }
 
 @media only screen and (max-width: 1000px) {
     .project-item {
         width: 90%;
+    }
+
+    .welcome-text-container {
+        top: 15%;
     }
 }
 
@@ -244,6 +252,10 @@
 
     .project-item {
         width: 95%;
+    }
+
+    .welcome-text-container {
+        top: 5%;
     }
 
     .welcome-text-container h2 {
