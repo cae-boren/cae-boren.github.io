@@ -100,7 +100,7 @@
 }
 
 .ps5 {
-    filter: invert();
+    /* filter: invert(); */
     left: 12rem;
 }
 

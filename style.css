@@ -29,6 +29,7 @@
 }
 
 html {
+    scrollbar-gutter: stable;
     font-family: "JetBrains Mono", monospace;
     color: white;
     background-color: var(--background-color);
@@ -60,14 +61,16 @@ header {
     display: flex;
     position: sticky;
     top: 0;
-    height: var(--header-height);
+    height: 100%;
     background-color: var(--container-background-color);
     font-weight: lighter;
 }
 
 header > p { /* name, left aligned */
     cursor: pointer;
-    line-height: var(--header-height);
+    display: flex;
+    align-items: center;
+    height: 100%;
     position: absolute;
     left: 0;
     padding: 0 var(--header-item-margin) 0 var(--header-item-margin);

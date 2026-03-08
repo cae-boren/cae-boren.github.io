@@ -8,7 +8,6 @@
 
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/135d8e4e14.js" crossorigin="anonymous" defer></script>
-    <script src="main.js" defer></script>
     
     <link rel="preload" href="projects.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="projects.css"></noscript>
@@ -77,110 +76,27 @@
                 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠁⠰⣉⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
             </p>
         </div>
-        <div id="welcome-card" class="visible">
-            <img src="media/selfie.jpg" alt="selfie">
-            <p id="selfie-drip">
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⣤⣤⣤⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
-⠀⠀⠀⠀⠀⠀⠀⠀⢠⣿⠋⠀⠀⠙⢿⣦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
-⠀⠀⠀⠀⠀⠀⠀⠀⣸⡇⠀⠀⠀⠀⠀⠙⢿⣦⡀⠀⠀⢀⣀⣀⣠⣤⣀⠀⠀<br>
-⠀⠀⠀⠀⠀⠀⠀⠀⣿⠇⠀⠀⠀⠀⠀⠀⠀⠙⠿⠿⠟⠛⠛⠋⠉⠉⠛⣷⡄<br>
-⠀⠀⠀⠀⠀⠀⠀⢠⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡇<br>
-⠀⠀⠀⠀⣀⣤⣶⠿⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⡿⠃<br>
-⠀⣠⣶⠿⠛⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⡿⠣⠀<br>
-⢸⡟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⡿⠁⠀⠀<br>
-⢸⣧⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⣷⡀⠄⠀<br>
-⠀⠙⠿⣶⣤⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⣷⡄⠀<br>
-⠀⠀⠀⠀⠉⠛⠿⣶⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⣿⡄<br>
-⠀⠀⠀⠀⠀⠀⠀⠘⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡇<br>
-⠀⠀⠀⠀⠀⠀⠀⠀⣿⡆⠀⠀⠀⠀⠀⠀⠀⣠⣶⣶⣦⣤⣤⣄⣀⣀⣤⡿⠃<br>
-⠀⠀⠀⠀⠀⠀⠀⠀⢹⡇⠀⠀⠀⠀⠀⣠⣾⠏⠀⠀⠀⠈⠉⠉⠙⠛⠉⠀⠀<br>
-⠀⠀⠀⠀⠀⠀⠀⠀⠘⣿⣄⠀⠀⣠⣾⠟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠛⠛⠛⠛⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-            </p>
-            <div>
-                <h2 class="highlight-on-hover">Gameplay Programmer</h2>
-                <h1 class="highlight-on-hover">Cae Borén</h1>
-                <h2 class="highlight-on-hover">Gameplay / Systems / Tools</h2>
+        <div class="about-me site-welcome" style="height: fit-content;">
+            <div class="welcome-text-container" id="welcome-text">
+                <h1 class="secondary-font-color">
+                    About Me
+                </h1>
             </div>
         </div>
-        <div id="game-projects" class="section-content hidden">
-            <div class="project-container">
-                <img src="project_images/m0ther.webp" class="project-image">
-                <img src="project_frames/m0ther_frame.webp" class="project-frame">
-                <div class="project-info">
-                    <div class="project-info-text-container">
-                        <h3>A dark but charming puzzle game about a supercomputer guiding packs of stupid creatures through a deadly testing faciliy</h3>
-                    </div>
-                    <i class="fa-brands fa-windows project-icon"></i>
-                    <img src="project_info/godot.svg" class="project-icon">
+        <div class="about-me site-container">
+            <div id="about-container">
+                <img src="other_media/selfie.webp" id="selfie">
+                <div id="about-me-text-container">
+                    <p>My name is Cae, I'm a game programmer student at PlaygroundSquad, Falun.</p>
+                    <p><br>When working on games I like doing a wide range of tasks, from coding game mechanics to split screen to VFX and fancy over-engineered blood systems! (Check out M0THER!)</p>
+                    <p><br>Outside of games I enjoy climbing plastic rocks! With my friends!!</p>
+                    <p>Totally do grab a peek at me falling below</p>
+                    <p style="font-size: smaller; font-style: italic;">ouch >.<</p>
                 </div>
             </div>
-            <div class="project-container">
-                <img src="project_images/entropy.webp" class="project-image">
-                <img src="project_frames/entropy_frame.webp" class="project-frame">
-                <div class="project-info">
-                    <div class="project-info-text-container">
-                        <h3>Winner of Swedish Game Awards 2025 <b>Game of the Year</b> & <b>Best Visuals</b></h3>
-                        <h3>Nominated for <b>Best Technology</b></h3>
-                    </div>
-                    <img src="project_info/unreal_engine.svg" class="project-icon ue">
-                    <i class="fa-brands fa-windows project-icon"></i>
-                    <img src="project_info/ps5.png" class="project-icon ps5">
-                </div>
-            </div>
-            <div class="project-container">
-                <img src="project_images/slip_up_n_slide.webp" class="project-image">
-                <img src="project_frames/slip_up_n_slide_frame.webp" class="project-frame">
-                <div class="project-info">
-                    <div class="project-info-text-container">
-                        <h3>Penguin Couch Co-op Racing Game</h3>
-                        <h3>Developed in our in-house engine TenGine</h3>
-                    </div>
-                    <img src="project_info/tengine_text.webp" class="project-icon tengine">
-                    <i class="fa-brands fa-windows project-icon"></i>
-                    <img src="project_info/ps5.png" class="project-icon ps5">
-                </div>
+            <div id="climbing-container" style="display: flex; justify-content: center;">
+                <img src="other_media/climbing.webp" id="climbing" style="width: 80%;">
             </div>
         </div>
-        <div id="personal-projects" class="section-content hidden">
-            <div class="project-container">
-                <img src="project_images/terrain_tool.webp" class="project-image">
-                <img src="project_frames/terrain_tool_frame.webp" class="project-frame">
-                <div class="project-info">
-                    <div class="project-info-text-container">
-                        <h2>Specialization</h2>
-                        <h3><br>Marching Cubes in-editor Terrain Tool</h3>
-                    </div>
-                    <i class="fa-brands fa-windows project-icon"></i>
-                    <i class="fa-brands fa-linux project-icon"></i>
-                    <i class="fa-brands fa-apple project-icon"></i>
-                    <i class="fa-brands fa-android project-icon"></i>
-                    <img src="project_info/godot.svg" class="project-icon">
-                </div>
-            </div>
-            <div class="project-container">
-                <img src="project_images/personal_project.webp" class="project-image">
-                <img src="project_frames/personal_project_frame.webp" class="project-frame">
-                <div class="project-info">
-                    <div class="project-info-text-container">
-                        <h2>Personal Project</h2>
-                        <h3><br>Android demo featuring</h3>
-                        <h3>OpenStreetMaps integration</h3>
-                        <h3>Procedural Dungeons</h3>
-                    </div>
-                    <img src="project_info/godot.svg" class="project-icon">
-                    <img src="project_info/openstreetmap.png" class="project-icon" style="right:14rem">
-                    <i class="fa-brands fa-android project-icon android-solo"></i>
-                </div>
-            </div>
-        </div>
-        </div>
-        <!-- <div id="scroll-arrow-container">
-            <p>-></p>
-        </div> -->
     </main>
-    <footer>
-
-    </footer>
 </body>
-</html>
