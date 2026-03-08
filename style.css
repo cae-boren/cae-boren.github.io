@@ -186,6 +186,10 @@ header > nav > a:hover {
     color: blue;
 } */
 
+.project-info-text-container h3 span {
+    color: var(--hero-color);
+}
+
 .section-content {
     display: flex;
     flex-direction: column;
@@ -218,11 +222,23 @@ header > nav > a:hover {
     header {
         font-size: 1.5rem;
     }
+
+    .project-container {
+        width: 60% !important;
+    }
+
+    .project-info-text-container h3 {
+        font-size: 1.5rem;
+    }
 }
 
 @media only screen and (max-width: 1000px) {
     header nav a {
         padding: calc(var(--header-item-margin) / 2);
+    }
+
+    .project-container {
+        width: 80% !important;
     }
 
     .header-divider {
@@ -248,7 +264,7 @@ header > nav > a:hover {
     header nav {
         flex-wrap: wrap;
         justify-content: center;
-        margin-left: 150px;
+        margin-left: 110px;
     }
 
     header nav a {
@@ -266,6 +282,24 @@ header > nav > a:hover {
     }
 
     #selfie-drip {
+        display: none;
+    }
+
+    #name-button {
+        padding: 0 0 0 var(--header-item-margin);
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .project-info-text-container h3 {
+        font-size: 1.3rem;
+    }
+
+    .project-info img {
+        display: none;
+    }
+    
+    .project-info i {
         display: none;
     }
 }
