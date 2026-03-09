@@ -103,16 +103,16 @@
                 <div class="category-title">Blood System</div>
                 <div>
                     <p>
-                        <br>I designed and implemented a blood system. It features a <b>custom particle 
-                        system</b> in order to get collision results for the particles, something which is 
-                        otherwise not possible in Godot.<br><br>
+                        <br>I designed and implemented a blood system. It features a <span>custom particle 
+                        system</span> in order to get collision results for the particles, something which is 
+                        otherwise not possible in Godot.
 
-                        Upon getting a collision result from a particle, an entry is added into a dictionary 
+                        <br><br>Upon getting a collision result from a particle, an entry is added into a dictionary 
                         which holds all the relevant information for a background thread to compute the UV 
                         position of the hit. Getting the UV position is required to mask pixels around the 
-                        hit UV position which causes the shader I made to render the blood texture.<br><br>
+                        hit UV position which causes the shader I made to render the blood texture.
 
-                        An important feature for us on the team was to have persistent blood in the 
+                        <br><br>An important feature for us on the team was to have <span>persistent blood</span> in the 
                         level, which would cause more and more blood to show for each retry. Because of 
                         engine limitations it wasn't possible to find each mesh after reloading the level, 
                         as all IDs would be re-generated. To circumvent this issue I simply store all the 
@@ -132,17 +132,17 @@
                 <div>
                     <p>
                         <br>All of the settings as well as the settings UI functionality was implemented by me. 
-                        It features many video settings as well as some for audio and input.<br><br>
+                        It features many video settings as well as some for audio and input.
 
-                        The system uses Godot's ConfigFile which allows for the saved values to be stored, 
+                        <br><br>The system uses Godot's ConfigFile which allows for the saved values to be stored, 
                         loaded and modified across sessions via the settings menu. When loading the settings 
                         script it tries to find the settings config file. If unsuccessful, a default one is 
                         created and used instead. This realistically happens on the first start of the game. 
                         Something important to me was for the user to have access to a wide range of settings. 
                         These include screen mode, resolution, fps limit, VSync, motion blur, render scale and 
-                        shadow quality.<br><br>
+                        shadow quality.
 
-                        Some work also went into controlling the audio volume. This is done by directly 
+                        <br><br>Some work also went into controlling the audio volume. This is done by directly 
                         controlling FMOD VCAs. FMOD sometimes loads slowly so handling async loading of 
                         the VCAs with scheduled retries was required.<br>
                     </p>
@@ -155,12 +155,14 @@
                 <div class="category-title">Level Editor</div>
                 <div>
                     <p>
-                        <br><b>Note:</b> this was cut because it didn't stay aligned with the vision of the project 
-                        as it evolved.<br><br>
-                        I built an in-engine grid-based 3D level editor designed for fast iteration and 
+                        <br><span>Note:</span> this was cut because it didn't stay aligned with the vision of the project 
+                        as it evolved.
+                        
+                        <br><br>I built an in-engine grid-based 3D level editor designed for fast iteration and 
                         non-destructive workflows. The editor runs directly inside the game and integrates 
                         custom gizmos, snapping logic, undoable commands, multi-selecting and object duplication. 
-                        Alongside the level editor I had to build a system for saving levels locally. It also 
+                        
+                        <br><br>Alongside the level editor I had to build a system for saving levels locally. It also 
                         exports previews of the levels, which was displayed in the level-selection screen.<br>
                         The most difficult part to implement was a system to undo/redo any changes made 
                         within the level editor. It uses two separate command stacks keeping track of undo and 
@@ -182,14 +184,16 @@
                     Based on the selected modification, the system handles things such as animating the 
                     creature's scale, movement speed, offset from the ground and much more-
                     everything required to go from cute little creature to a big cube to a balloon and back 
-                    to cute little creature!<br><br>
+                    to cute little creature! <a href="https://benjaminbrandt.se/portfolio/" target="_blank">Benjamin Brandt</a> implemented 
+                    the behaviours in the different states, I only handled the transitions to the states.
                     
-                    On top of that I also made the animation blend trees for both types of creatures and 
-                    implemented parts of it in code, other parts were done by one of my groupmates.<br><br>
+                    <br><br>On top of that I also made the animation blend trees for both types of creatures and 
+                    implemented parts of it in code, other parts were done by one of my groupmates.
 
-                    I also developed a level switcher that works for all levels by keeping track of the 
-                    current level and simply changing the scene to the next level in the level list.<br><br>
-                    There are more areas that I worked on but all of which were quite small or simply me 
+                    <br><br>I also developed a level switcher that works for all levels by keeping track of the 
+                    current level and simply changing the scene to the next level in the level list.
+                    
+                    <br><br>There are more areas that I worked on but all of which were quite small or simply me 
                     helping others out with their code!
                 </p>
             </div>
