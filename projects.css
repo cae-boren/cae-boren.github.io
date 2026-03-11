@@ -164,6 +164,7 @@
     height: var(--welcome-height);
     display: flex;
     flex-direction: column;
+    text-shadow: 2px 2px 2px black;
 }
 
 .welcome-gif {
@@ -173,7 +174,7 @@
     height: var(--welcome-height);
     z-index: -1;
 
-    filter: brightness(30%);
+    filter: brightness(80%);
 }
 
 .welcome-text-container {
