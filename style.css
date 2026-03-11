@@ -162,6 +162,22 @@ header > nav > a:hover {
     line-height: 8rem;
 }
 
+#award-container {
+    position: absolute;
+    left: calc(100vw / 2 - 40vw / 2);
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    width: 40vw;
+    height: 20vh;
+}
+
+#award-container img {
+    aspect-ratio: 1 / 1;
+    width: min(20vh, 40vw);
+    height: min(20vh, 40vw);
+}
+
 #scroll-arrow-container {
     cursor: pointer;
     clip-path: circle();
@@ -300,6 +316,10 @@ header > nav > a:hover {
     }
     
     .project-info i {
+        display: none;
+    }
+
+    #award-container {
         display: none;
     }
 }
