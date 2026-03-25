@@ -77,17 +77,26 @@
             </p>
         </div>
         <div class="terrain-tool site-welcome" style="display: flex; justify-content: center; flex-direction: row; background-color: initial;">
-            <div class="welcome-text-container" id="welcome-text">
+            <div class="welcome-text-container" id="welcome-text" style="height: 50rem;">
                 <h2>
                     Android OpenStreetMap Demo with Procedural Dungeons<br>
                     Developed in 4 weeks
                 </h2>
-                <h3>(Low frame rate to keep file size low)</h3>
             </div>
             <img src="personal_project_media/demo.gif" class="welcome-gif" style="width: auto; filter: brightness(60%);">
         </div>
+        <div class="project-item">
+            <div class="category-title">Contributions</div>
+            <p>
+                <a href="#item-1">GPS-Based OpenStreetMap Viewer</a>
+                <br><a href="#item-2">World Objects & Custom Animation System</a>
+                <br><a href="#item-3">Procedural Dungeons</a>
+                <br><a href="#item-4">Inventory & Combat</a>
+            </p>
+            </div>
+        </div>
         <div class="personal-project site-container">
-            <div class="project-item">
+            <div class="project-item" id="item-1">
                 <div class="category-title">GPS-Based OpenStreetMap Viewer</div>
                 <div class="description-and-image-container">
                     <p>
@@ -133,7 +142,7 @@
                     <img src="personal_project_media/world.png">
                 </div>
             </div>
-            <div class="project-item full-size">
+            <div class="project-item full-size" id="item-2">
                 <div class="category-title">World Objects & Custom Animation System</div>
                 <div>
                     <p>
@@ -175,7 +184,7 @@
                     </p>
                 </div>
             </div>
-            <div class="project-item">
+            <div class="project-item" id="item-3">
                 <div class="category-title">Procedural Dungeons</div>
                 <div>
                     <p>
@@ -208,7 +217,7 @@
                     <img src="personal_project_media/dungeon2.png" style="width: auto; margin-right: auto; margin-left: 5rem; aspect-ratio: 9/16;">
                 </div>
             </div>
-            <div class="project-item full-size">
+            <div class="project-item full-size" id="item-4">
                 <div class="category-title">Inventory & Combat</div>
                 <div class="description-and-image-container">
                     <p>
@@ -216,7 +225,7 @@
                         and combat.
 
                         <br><br>To be able to use and recieve items, an inventory was needed. This was made with simple 
-                        Godot UI and uses the <span>ConfigFile</span> class in Godot to store items in sections 
+                        Godot UI and uses the ConfigFile class in Godot to store items in sections 
                         named <i>items</i>, <i>equipped</i> and <i>resources</i>. Items and resources contains 
                         things you've picked up while the equipped section is used to tell what weapons and 
                         armour is currently used by the player. On ready, the <i>_load_config()</i> function 
